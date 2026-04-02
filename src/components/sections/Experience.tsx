@@ -137,6 +137,8 @@ export default function Experience() {
                     className={`font-mono text-[10px] px-2 py-0.5 rounded-full border ${
                       edu.status === 'Em andamento'
                         ? 'text-neon-green border-neon-green/30'
+                        : edu.status === 'Cancelado'
+                        ? 'text-gruvbox-red-bright border-gruvbox-red/30 line-through opacity-70'
                         : 'text-gruvbox-fg4 border-gruvbox-bg3'
                     }`}
                   >

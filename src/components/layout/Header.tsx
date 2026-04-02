@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Terminal } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const navItems = [
   { label: 'Início', href: '#hero' },
@@ -55,7 +56,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2 group">
-            <Terminal className="w-5 h-5 text-neon-green group-hover:animate-pulse" />
+            <Image src="/logo.svg" alt="Logo" width={24} height={24} className="group-hover:drop-shadow-[0_0_6px_rgba(57,255,20,0.5)] transition-all" />
             <span className="font-display text-sm md:text-base tracking-wider text-gruvbox-fg1 group-hover:text-neon-green transition-colors">
               athos<span className="text-neon-green">.</span>dev
             </span>

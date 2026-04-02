@@ -1,6 +1,7 @@
 'use client';
 
-import { Mail, Heart, Terminal } from 'lucide-react';
+import { Mail, Heart } from 'lucide-react';
+import Image from 'next/image';
 import { IconGitHub, IconLinkedIn } from '@/components/ui/SocialIcons';
 import { SOCIAL_LINKS } from '@/styles/theme';
 
@@ -13,7 +14,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <Terminal className="w-4 h-4 text-neon-green" />
+            <Image src="/logo.svg" alt="Logo" width={16} height={16} />
             <span className="font-display text-xs tracking-wider text-gruvbox-fg4">
               athos<span className="text-neon-green">.</span>dev
             </span>

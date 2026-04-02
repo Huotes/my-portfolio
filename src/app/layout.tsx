@@ -17,10 +17,15 @@ export const metadata: Metadata = {
     'Cybersecurity',
   ],
   authors: [{ name: 'Athos Aurélio' }],
+  icons: {
+    icon: '/logo.svg',
+    shortcut: '/logo.svg',
+    apple: '/logo.svg',
+  },
   openGraph: {
     title: 'Athos Aurélio | Backend Warlock',
     description: 'Generalista que se diverte com backend, infra e segurança.',
-    url: 'https://athosaurelio.dev',
+    url: 'https://athosaurelio.com.br',
     siteName: 'Athos Aurélio Portfolio',
     locale: 'pt_BR',
     type: 'website',

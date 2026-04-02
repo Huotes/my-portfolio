@@ -57,7 +57,7 @@ export default function HackerLab() {
             <div className="p-4 sm:p-6 grid sm:grid-cols-2 gap-6">
               {/* ASCII art side */}
               <pre className="font-mono text-[10px] sm:text-xs leading-tight text-neon-green">
-              {`
+                {`
               +----------------------+
               |   /\\  /\\  /\\  /\\     |
               |  /__\\/__\\/__\\/__\\    |

@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
     company: 'Centro Médico Integrado',
     role: 'Desenvolvedor Full Stack',
     level: 'Sênior',
-    period: 'Jun 2025 — Presente',
+    period: 'Jun 2025 — Mar 2026',
     location: 'Presidente Prudente, SP',
     description: [
       'Responsável principal por sistemas de controle e automação de distribuição de serviços',
@@ -113,20 +113,20 @@ export const experiences: Experience[] = [
 
 export const education = [
   {
-    id: 'fiap',
-    institution: 'FIAP',
-    course: 'Defesa Cibernética',
-    degree: 'Tecnólogo (CST)',
-    period: 'Ago 2024 — Ago 2026',
-    status: 'Em andamento',
-  },
-  {
     id: 'fatec',
     institution: 'FATEC Presidente Prudente',
     course: 'Análise e Desenvolvimento de Sistemas',
     degree: 'Tecnólogo (CST)',
-    period: 'Fev 2023 — Dez 2024',
-    status: 'Concluído',
+    period: 'Fev 2023 — Presente',
+    status: 'Em andamento',
+  },
+  {
+    id: 'fiap',
+    institution: 'FIAP',
+    course: 'Defesa Cibernética',
+    degree: 'Tecnólogo (CST)',
+    period: 'Ago 2024 — Mar 2026',
+    status: 'Cancelado',
   },
   {
     id: 'senac',
