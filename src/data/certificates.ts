@@ -6,6 +6,7 @@ export interface Certificate {
   hours?: number;
   credentialUrl: string;
   pdfPath?: string;
+  thumbnailPath?: string; // caminho local para preview (PNG ou PDF)
   tags: string[];
   icon: 'shield' | 'code' | 'server' | 'cpu' | 'lock' | 'globe' | 'gamepad' | 'database' | 'cloud';
 }
@@ -135,6 +136,7 @@ export const certificates: Certificate[] = [
     date: 'Out 2024',
     hours: 120,
     credentialUrl: 'https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/129995/1cd7ddaaef9b4b2e9542f3ee229a0022/certificado.png',
+    thumbnailPath: '/certificates/cybersec-hacker-skills-fiap.png',
     tags: ['Cybersecurity', 'Hacking', 'Segurança'],
     icon: 'shield',
   },
@@ -145,6 +147,7 @@ export const certificates: Certificate[] = [
     date: 'Nov 2024',
     hours: 100,
     credentialUrl: 'https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/132595/02aef706753a7848b0cecf024d679be7/certificado.png',
+    thumbnailPath: '/certificates/programacao-em-bd-fiap.png',
     tags: ['Banco de Dados', 'SQL', 'Programação'],
     icon: 'database',
   },
@@ -155,6 +158,7 @@ export const certificates: Certificate[] = [
     date: 'Nov 2024',
     hours: 60,
     credentialUrl: 'https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/133364/b80835810f1db93f8816ca1e0e807000/certificado.png',
+    thumbnailPath: '/certificates/big-data-fiap.png',
     tags: ['Big Data', 'Analytics', 'Data Science'],
     icon: 'database',
   },
@@ -165,6 +169,7 @@ export const certificates: Certificate[] = [
     date: 'Dez 2024',
     hours: 40,
     credentialUrl: 'https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/135101/ee754bc9f51f1d30370c50cbee88fa03/certificado.png',
+    thumbnailPath: '/certificates/estrutura-de-computadores-fiap.png',
     tags: ['Hardware', 'Arquitetura', 'Computação'],
     icon: 'cpu',
   },
@@ -175,6 +180,7 @@ export const certificates: Certificate[] = [
     date: 'Dez 2024',
     hours: 80,
     credentialUrl: 'https://on.fiap.com.br/pluginfile.php/1/local_nanocourses/certificado_nanocourse/135250/c65ebf0ab4e3af36416844b4b3dea979/certificado.png',
+    thumbnailPath: '/certificates/dominando-iot-fiap.png',
     tags: ['IoT', 'Hardware', 'Automação'],
     icon: 'cpu',
   },

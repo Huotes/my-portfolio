@@ -92,12 +92,12 @@ export const teamShoutout = {
   message:
     'Nenhuma jornada se faz sozinho. Salve eterno ao time incrível da IGS que me moldou como profissional. Vocês estarão para sempre no meu coração.',
   members: [
-    { name: 'Daniel Sasaki', url: 'https://www.linkedin.com/in/dsasaki87/' },
-    { name: 'Igor Almeida', url: 'https://www.linkedin.com/in/igor-d-almeida/' },
-    { name: 'João Pedro Durigan', url: 'https://www.linkedin.com/in/jpdurigan/' },
-    { name: 'Marcos Oliveira', url: 'https://www.linkedin.com/in/marcos-oliveira-filho-5276a61b0/' },
-    { name: 'Gabriel Santos', url: 'https://www.linkedin.com/in/gabriel-santos-silva-aaa99b139/' },
-    { name: 'Guilherme Gubany', url: 'https://www.linkedin.com/in/guilherme-homma-gubany-298073233/' },
+    { name: 'Daniel Sasaki', url: 'https://www.linkedin.com/in/dsasaki87/', photo: '/photos/daniel-sasaki.png' },
+    { name: 'Igor Almeida', url: 'https://www.linkedin.com/in/igor-d-almeida/', photo: '/photos/igaao.png' },
+    { name: 'João Pedro Durigan', url: 'https://www.linkedin.com/in/jpdurigan/', photo: '/photos/joao-pedro-durigan.png' },
+    { name: 'Marcos Oliveira', url: 'https://www.linkedin.com/in/marcos-oliveira-filho-5276a61b0/', photo: '/photos/marcao.png' },
+    { name: 'Gabriel Santos', url: 'https://www.linkedin.com/in/gabriel-santos-silva-aaa99b139/', photo: '/photos/gabriel-silva.png' },
+    { name: 'Guilherme Homma', url: 'https://www.linkedin.com/in/guilherme-homma-gubany-298073233/', photo: '/photos/guilherme-homma.png' },
   ],
 };
 

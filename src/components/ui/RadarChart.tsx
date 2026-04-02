@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { profileAxes, type ProfileAxis } from '@/data/profile';
+import { useState, useMemo } from "react";
+import { motion } from "framer-motion";
+import { profileAxes, type ProfileAxis } from "@/data/profile";
 
 interface RadarChartProps {
   axes?: ProfileAxis[];
@@ -13,15 +13,14 @@ interface RadarChartProps {
 export default function RadarChart({
   axes = profileAxes,
   size = 380,
-  className = '',
+  className = "",
 }: RadarChartProps) {
   const [hoveredAxis, setHoveredAxis] = useState<string | null>(null);
 
   const center = size / 2;
-  const maxRadius = size * 0.36;
-  const levels = 4; // anéis concêntricos (25%, 50%, 75%, 100%)
+  const maxRadius = size * 0.28;
+  const levels = 4;
   const angleStep = (2 * Math.PI) / axes.length;
-  // Começa do topo (-90°)
   const startAngle = -Math.PI / 2;
 
   const getPoint = (index: number, value: number) => {
@@ -35,16 +34,29 @@ export default function RadarChart({
 
   // Pontos do polígono de dados
   const dataPoints = axes.map((axis, i) => getPoint(i, axis.value));
-  const dataPath = dataPoints.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ') + ' Z';
+  const dataPath =
+    dataPoints.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ") +
+    " Z";
 
   // Polígonos de nível (grid)
   const levelPolygons = useMemo(() => {
+    const getPointMemo = (index: number, value: number) => {
+      const angle = startAngle + index * angleStep;
+      const radius = (value / 100) * maxRadius;
+      return {
+        x: center + radius * Math.cos(angle),
+        y: center + radius * Math.sin(angle),
+      };
+    };
     return Array.from({ length: levels }, (_, lvl) => {
       const pct = ((lvl + 1) / levels) * 100;
-      const pts = axes.map((_, i) => getPoint(i, pct));
-      return pts.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ') + ' Z';
+      const pts = axes.map((_, i) => getPointMemo(i, pct));
+      return (
+        pts.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ") +
+        " Z"
+      );
     });
-  }, [axes, size]);
+  }, [axes, size, center, maxRadius, startAngle, angleStep, levels]);
 
   // Linhas dos eixos
   const axisLines = axes.map((_, i) => {
@@ -53,7 +65,7 @@ export default function RadarChart({
   });
 
   // Label positions (um pouco fora do polígono)
-  const labelPoints = axes.map((_, i) => getPoint(i, 118));
+  const labelPoints = axes.map((_, i) => getPoint(i, 130));
 
   return (
     <div className={`relative ${className}`}>
@@ -95,7 +107,7 @@ export default function RadarChart({
             stroke="#504945"
             strokeWidth={i === levels - 1 ? 1 : 0.5}
             strokeOpacity={0.4 + i * 0.1}
-            strokeDasharray={i < levels - 1 ? '2 4' : 'none'}
+            strokeDasharray={i < levels - 1 ? "2 4" : "none"}
           />
         ))}
 
@@ -154,7 +166,7 @@ export default function RadarChart({
           initial={{ pathLength: 0, opacity: 0 }}
           whileInView={{ pathLength: 1, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 1.5, ease: 'easeOut', delay: 0.2 }}
+          transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
         />
 
         {/* Pontos nos vértices */}
@@ -170,11 +182,11 @@ export default function RadarChart({
                 r={isHovered ? 6 : 4}
                 fill={axis.neonColor}
                 filter="url(#dotGlow)"
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: "pointer" }}
                 initial={{ scale: 0, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.5 + i * 0.08, type: 'spring' }}
+                transition={{ delay: 0.5 + i * 0.08, type: "spring" }}
                 onMouseEnter={() => setHoveredAxis(axis.key)}
                 onMouseLeave={() => setHoveredAxis(null)}
               />
@@ -221,13 +233,13 @@ export default function RadarChart({
               key={`label-${i}`}
               x={point.x}
               y={point.y}
-              textAnchor={isLeft ? 'end' : isRight ? 'start' : 'middle'}
+              textAnchor={isLeft ? "end" : isRight ? "start" : "middle"}
               dominantBaseline="central"
-              fill={isHovered ? axis.neonColor : '#a89984'}
-              fontSize={isHovered ? '11' : '10'}
+              fill={isHovered ? axis.neonColor : "#a89984"}
+              fontSize={isHovered ? "11" : "10"}
               fontFamily="JetBrains Mono, monospace"
-              fontWeight={isHovered ? 'bold' : 'normal'}
-              style={{ cursor: 'pointer', transition: 'all 0.2s' }}
+              fontWeight={isHovered ? "bold" : "normal"}
+              style={{ cursor: "pointer", transition: "all 0.2s" }}
               onMouseEnter={() => setHoveredAxis(axis.key)}
               onMouseLeave={() => setHoveredAxis(null)}
             >

@@ -1,44 +1,58 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
+import Image from "next/image";
 import {
-  User, Target, Sword, Shield, Zap, Heart,
-  Swords, Globe, Gamepad2, Bug, Bot, Moon,
-} from 'lucide-react';
-import GlowCard from '@/components/ui/GlowCard';
-import TerminalText from '@/components/ui/TerminalText';
-import { playerStats } from '@/data/skills';
+  User,
+  Target,
+  Sword,
+  Shield,
+  Zap,
+  Heart,
+  Swords,
+  Globe,
+  Gamepad2,
+  Bug,
+  Bot,
+  Moon,
+} from "lucide-react";
+import GlowCard from "@/components/ui/GlowCard";
+import TerminalText from "@/components/ui/TerminalText";
+import { playerStats } from "@/data/skills";
 
 const traits = [
   {
     icon: Sword,
-    title: 'Ofensivo',
-    desc: 'Backend & Automação — Python, Django, Flask, FastAPI',
-    color: 'green' as const,
+    title: "Ofensivo",
+    desc: "Backend & Automação — Python, Django, Flask, FastAPI",
+    color: "green" as const,
   },
   {
     icon: Shield,
-    title: 'Defensivo',
-    desc: 'Segurança da Informação — DevSecOps, Pentest, OWASP',
-    color: 'blue' as const,
+    title: "Defensivo",
+    desc: "Segurança da Informação — DevSecOps, Pentest, OWASP",
+    color: "blue" as const,
   },
   {
     icon: Zap,
-    title: 'Suporte',
-    desc: 'DevOps & Infra — Docker, K8s, CI/CD, AWS, Linux',
-    color: 'orange' as const,
+    title: "Suporte",
+    desc: "DevOps & Infra — Docker, K8s, CI/CD, AWS, Linux",
+    color: "orange" as const,
   },
   {
     icon: Heart,
-    title: 'Passiva',
-    desc: 'Game Dev — Godot, Level Design, Multiplayer',
-    color: 'pink' as const,
+    title: "Passiva",
+    desc: "Game Dev — Godot, Level Design, Multiplayer",
+    color: "pink" as const,
   },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
+    <section
+      id="about"
+      className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <motion.div
@@ -50,7 +64,9 @@ export default function About() {
           <div className="flex items-center gap-3 mb-4">
             <User className="w-5 h-5 text-neon-green" />
             <h2 className="font-display text-2xl sm:text-3xl tracking-wider text-gruvbox-fg1">
-              <span className="text-neon-green font-mono text-sm mr-2">01.</span>
+              <span className="text-neon-green font-mono text-sm mr-2">
+                01.
+              </span>
               Sobre Mim
             </h2>
           </div>
@@ -79,20 +95,20 @@ export default function About() {
               <div className="p-4">
                 <TerminalText
                   lines={[
-                    'cat ~/about.md',
-                    '',
-                    '# O Coringa que você precisa',
-                    '',
-                    'Muito prazer, sou Athos Aurélio.',
-                    'Desenvolvedor Sênior, 21 anos,',
-                    'escrevendo código desde os 15.',
-                    '',
-                    'Generalista full-stack apaixonado por',
-                    'resolver problemas e facilitar a vida',
-                    'das pessoas através da tecnologia.',
-                    '',
-                    'Meu sonho? Tornar-me um DevSecOps capaz',
-                    'de resolver problemas de milhões.',
+                    "cat ~/about.md",
+                    "",
+                    "# O Coringa que você precisa",
+                    "",
+                    "Muito prazer, sou Athos Aurélio.",
+                    "Desenvolvedor Sênior, 21 anos,",
+                    "escrevendo código desde os 15.",
+                    "",
+                    "Generalista full-stack apaixonado por",
+                    "resolver problemas e facilitar a vida",
+                    "das pessoas através da tecnologia.",
+                    "",
+                    "Meu sonho? Tornar-me um DevSecOps capaz",
+                    "de resolver problemas de milhões.",
                   ]}
                   typingSpeed={20}
                 />
@@ -100,20 +116,29 @@ export default function About() {
             </div>
 
             <p className="text-gruvbox-fg3 leading-relaxed text-sm sm:text-base">
-              Com bagagem em{' '}
-              <span className="text-neon-green font-medium">desenvolvimento de jogos</span>,{' '}
-              <span className="text-neon-blue font-medium">freelancing internacional</span>,{' '}
-              estágio na{' '}
-              <span className="text-neon-orange font-medium">PGFN</span> e sistemas para{' '}
-              <span className="text-neon-pink font-medium">saúde ocupacional</span> — cada
-              experiência moldou um profissional versátil, que entrega soluções
-              robustas em backend, automatiza processos complexos e protege o que
-              constrói.
+              Com bagagem em{" "}
+              <span className="text-neon-green font-medium">
+                desenvolvimento de jogos
+              </span>
+              ,{" "}
+              <span className="text-neon-blue font-medium">
+                freelancing internacional
+              </span>
+              , estágio na{" "}
+              <span className="text-neon-orange font-medium">PGFN</span> e
+              sistemas para{" "}
+              <span className="text-neon-pink font-medium">
+                saúde ocupacional
+              </span>{" "}
+              — cada experiência moldou um profissional versátil, que entrega
+              soluções robustas em backend, automatiza processos complexos e
+              protege o que constrói.
             </p>
 
             <p className="font-mono text-xs text-gruvbox-fg4 border-l-2 border-neon-green/30 pl-4">
-              &quot;O melhor código é aquele que resolve o problema de alguém.
-              O segundo melhor é aquele que você automatizou para nunca mais precisar escrever.&quot;
+              &quot;O melhor código é aquele que resolve o problema de alguém. O
+              segundo melhor é aquele que você automatizou para nunca mais
+              precisar escrever.&quot;
             </p>
           </motion.div>
 
@@ -128,13 +153,21 @@ export default function About() {
             {/* Player card */}
             <GlowCard neonColor="green">
               <div className="text-center mb-4">
-                <div className="w-16 h-16 mx-auto mb-3 rounded-full border-2 border-neon-green/40 bg-gruvbox-bg2 flex items-center justify-center text-2xl">
-                  🧙
+                <div className="w-16 h-16 mx-auto mb-3 rounded-full border-2 border-neon-green/40 overflow-hidden relative">
+                  <Image
+                    src="/photos/me.png"
+                    alt="Athos Aurélio"
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-display text-sm tracking-wider text-neon-green">
                   {playerStats.title}
                 </h3>
-                <p className="font-mono text-xs text-gruvbox-fg4">{playerStats.class}</p>
+                <p className="font-mono text-xs text-gruvbox-fg4">
+                  {playerStats.class}
+                </p>
                 <p className="font-mono text-[10px] text-gruvbox-gray mt-1">
                   Guild: {playerStats.guild}
                 </p>
@@ -145,7 +178,8 @@ export default function About() {
                 <div className="flex justify-between font-mono text-[10px] text-gruvbox-fg4 mb-1">
                   <span>LVL {playerStats.level}</span>
                   <span>
-                    {playerStats.totalXP.toLocaleString()}/{playerStats.nextLevelXP.toLocaleString()} XP
+                    {playerStats.totalXP.toLocaleString()}/
+                    {playerStats.nextLevelXP.toLocaleString()} XP
                   </span>
                 </div>
                 <div className="xp-bar-container">
@@ -156,10 +190,10 @@ export default function About() {
                       width: `${(playerStats.totalXP / playerStats.nextLevelXP) * 100}%`,
                     }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1.5, ease: 'easeOut' }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
                     style={{
-                      background: 'linear-gradient(90deg, #39ff14, #00f0ff)',
-                      boxShadow: '0 0 8px rgba(57,255,20,0.4)',
+                      background: "linear-gradient(90deg, #39ff14, #00f0ff)",
+                      boxShadow: "0 0 8px rgba(57,255,20,0.4)",
                     }}
                   />
                 </div>
@@ -176,9 +210,14 @@ export default function About() {
                     transition={{ delay: 0.3 + i * 0.1 }}
                     className="flex items-center gap-2 p-2 rounded bg-gruvbox-bg0/50 border border-gruvbox-bg2/50"
                   >
-                    <trait.icon size={14} className="text-gruvbox-fg4 shrink-0" />
+                    <trait.icon
+                      size={14}
+                      className="text-gruvbox-fg4 shrink-0"
+                    />
                     <div>
-                      <p className="font-mono text-[10px] text-gruvbox-fg3">{trait.title}</p>
+                      <p className="font-mono text-[10px] text-gruvbox-fg3">
+                        {trait.title}
+                      </p>
                     </div>
                   </motion.div>
                 ))}
@@ -192,11 +231,19 @@ export default function About() {
               </h4>
               <div className="grid grid-cols-4 gap-2">
                 {playerStats.achievements.slice(0, 8).map((ach, i) => {
-                  const AchIcon = ({
-                    swords: Swords, globe: Globe, shield: Shield,
-                    'gamepad-2': Gamepad2, bug: Bug, bot: Bot,
-                    moon: Moon, zap: Zap,
-                  } as Record<string, typeof Swords>)[ach.icon] || Zap;
+                  const AchIcon =
+                    (
+                      {
+                        swords: Swords,
+                        globe: Globe,
+                        shield: Shield,
+                        "gamepad-2": Gamepad2,
+                        bug: Bug,
+                        bot: Bot,
+                        moon: Moon,
+                        zap: Zap,
+                      } as Record<string, typeof Swords>
+                    )[ach.icon] || Zap;
 
                   return (
                     <motion.div
@@ -204,12 +251,15 @@ export default function About() {
                       initial={{ opacity: 0, scale: 0 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
-                      transition={{ delay: 0.4 + i * 0.08, type: 'spring' }}
+                      transition={{ delay: 0.4 + i * 0.08, type: "spring" }}
                       className="text-center group cursor-default"
                       title={`${ach.name}: ${ach.description}`}
                     >
                       <div className="flex justify-center group-hover:scale-125 transition-transform">
-                        <AchIcon size={18} className="text-gruvbox-fg4 group-hover:text-neon-blue transition-colors" />
+                        <AchIcon
+                          size={18}
+                          className="text-gruvbox-fg4 group-hover:text-neon-blue transition-colors"
+                        />
                       </div>
                       <p className="font-mono text-[8px] text-gruvbox-fg4 mt-1 truncate">
                         {ach.name}

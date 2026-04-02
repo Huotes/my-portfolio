@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Terminal, Cpu, Shield, Gamepad2, Monitor, Wifi } from 'lucide-react';
-import GlowCard from '@/components/ui/GlowCard';
-import { linuxDistros, hackerHobbies } from '@/data/projects';
+import { motion } from "framer-motion";
+import { Terminal, Cpu, Shield, Gamepad2, Monitor, Wifi } from "lucide-react";
+import GlowCard from "@/components/ui/GlowCard";
+import { linuxDistros, hackerHobbies } from "@/data/projects";
 
 const hobbyIcons: Record<string, typeof Terminal> = {
   terminal: Terminal,
@@ -14,7 +14,10 @@ const hobbyIcons: Record<string, typeof Terminal> = {
 
 export default function HackerLab() {
   return (
-    <section id="lab" className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8 grid-bg">
+    <section
+      id="lab"
+      className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8 grid-bg"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -26,7 +29,9 @@ export default function HackerLab() {
           <div className="flex items-center gap-3 mb-4">
             <Terminal className="w-5 h-5 text-neon-green" />
             <h2 className="font-display text-2xl sm:text-3xl tracking-wider text-gruvbox-fg1">
-              <span className="text-neon-green font-mono text-sm mr-2">08.</span>
+              <span className="text-neon-green font-mono text-sm mr-2">
+                08.
+              </span>
               Hacker Lab
             </h2>
           </div>
@@ -51,16 +56,17 @@ export default function HackerLab() {
             </div>
             <div className="p-4 sm:p-6 grid sm:grid-cols-2 gap-6">
               {/* ASCII art side */}
-              <div className="font-mono text-[10px] sm:text-xs leading-tight text-neon-green whitespace-pre">
-{`    ╔══════════════════════╗
-    ║   ┌─┐ ┌┬┐┬ ┬┌─┐┌─┐ ║
-    ║   ├─┤  │ ├─┤│ │└─┐ ║
-    ║   ┴ ┴  ┴ ┴ ┴└─┘└─┘ ║
-    ║  ┌┬┐┌─┐┬  ┬         ║
-    ║   ││├┤ └┐┌┘         ║
-    ║  ─┴┘└─┘ └┘          ║
-    ╚══════════════════════╝`}
-              </div>
+              <pre className="font-mono text-[10px] sm:text-xs leading-tight text-neon-green">
+              {`
+              +----------------------+
+              |   /\\  /\\  /\\  /\\     |
+              |  /__\\/__\\/__\\/__\\    |
+              |  \\  /\\  /\\  /\\  /    |
+              |   \\/  \\/  \\/  \\/     |
+              |     A T H O S        |
+              |        DEV           |
+              +----------------------+`}
+              </pre>
 
               {/* System info */}
               <div className="font-mono text-xs space-y-1">
@@ -97,7 +103,9 @@ export default function HackerLab() {
                 <div>
                   <span className="text-neon-green">Editor</span>
                   <span className="text-gruvbox-fg4">: </span>
-                  <span className="text-gruvbox-fg2">Neovim + custom init.lua</span>
+                  <span className="text-gruvbox-fg2">
+                    Neovim + custom init.lua
+                  </span>
                 </div>
                 <div>
                   <span className="text-neon-green">Terminal</span>
@@ -110,8 +118,21 @@ export default function HackerLab() {
                   <span className="text-gruvbox-fg2">Gruvbox Dark Hard</span>
                 </div>
                 <div className="pt-2 flex gap-1">
-                  {['#cc241d','#98971a','#d79921','#458588','#b16286','#689d6a','#d65d0e','#ebdbb2'].map(c => (
-                    <span key={c} className="w-4 h-4 rounded-sm" style={{ backgroundColor: c }} />
+                  {[
+                    "#cc241d",
+                    "#98971a",
+                    "#d79921",
+                    "#458588",
+                    "#b16286",
+                    "#689d6a",
+                    "#d65d0e",
+                    "#ebdbb2",
+                  ].map((c) => (
+                    <span
+                      key={c}
+                      className="w-4 h-4 rounded-sm"
+                      style={{ backgroundColor: c }}
+                    />
                   ))}
                 </div>
               </div>
@@ -137,11 +158,13 @@ export default function HackerLab() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08, type: 'spring' }}
-                whileHover={{ y: -4, borderColor: 'rgba(57,255,20,0.4)' }}
+                transition={{ delay: i * 0.08, type: "spring" }}
+                whileHover={{ y: -4, borderColor: "rgba(57,255,20,0.4)" }}
                 className="text-center p-3 rounded-lg bg-gruvbox-bg0/60 border border-gruvbox-bg2/40 transition-all"
               >
-                <p className="font-mono text-xs text-gruvbox-fg1 mb-1">{distro.name}</p>
+                <p className="font-mono text-xs text-gruvbox-fg1 mb-1">
+                  {distro.name}
+                </p>
                 <p className="font-mono text-[9px] text-neon-green/70 uppercase tracking-wider">
                   {distro.level}
                 </p>
@@ -157,16 +180,29 @@ export default function HackerLab() {
         <div className="grid sm:grid-cols-2 gap-4">
           {hackerHobbies.map((hobby, i) => {
             const Icon = hobbyIcons[hobby.icon];
-            const colors: Array<'green' | 'blue' | 'orange' | 'pink'> = ['green', 'blue', 'orange', 'pink'];
+            const colors: Array<"green" | "blue" | "orange" | "pink"> = [
+              "green",
+              "blue",
+              "orange",
+              "pink",
+            ];
             return (
-              <GlowCard key={hobby.title} neonColor={colors[i % 4]} delay={i * 0.1}>
+              <GlowCard
+                key={hobby.title}
+                neonColor={colors[i % 4]}
+                delay={i * 0.1}
+              >
                 <div className="flex items-start gap-3">
                   <div className="p-2 rounded-lg bg-gruvbox-bg0/80 border border-gruvbox-bg2/50 shrink-0">
                     <Icon size={18} className="text-gruvbox-fg4" />
                   </div>
                   <div>
-                    <h4 className="font-mono text-sm text-gruvbox-fg1 mb-1">{hobby.title}</h4>
-                    <p className="text-xs text-gruvbox-fg4 leading-relaxed">{hobby.desc}</p>
+                    <h4 className="font-mono text-sm text-gruvbox-fg1 mb-1">
+                      {hobby.title}
+                    </h4>
+                    <p className="text-xs text-gruvbox-fg4 leading-relaxed">
+                      {hobby.desc}
+                    </p>
                   </div>
                 </div>
               </GlowCard>
@@ -182,11 +218,13 @@ export default function HackerLab() {
           className="mt-8"
         >
           <div className="font-mono text-xs text-gruvbox-fg4 border-l-2 border-neon-green/30 pl-4">
-            <span className="text-neon-green">// </span>
-            Customizar dotfiles não é perda de tempo — é investimento em qualidade de vida.
+            <span className="text-neon-green">{"// "}</span>
+            Customizar dotfiles não é perda de tempo — é investimento em
+            qualidade de vida.
             <br />
-            <span className="text-neon-green">// </span>
-            Cada keybind economiza milissegundos. Milissegundos viram horas. Horas viram projetos.
+            <span className="text-neon-green">{"// "}</span>
+            Cada keybind economiza milissegundos. Milissegundos viram horas.
+            Horas viram projetos.
           </div>
         </motion.div>
       </div>
