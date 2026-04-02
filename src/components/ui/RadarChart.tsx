@@ -65,13 +65,13 @@ export default function RadarChart({
   });
 
   // Label positions (um pouco fora do polígono)
-  const labelPoints = axes.map((_, i) => getPoint(i, 130));
+  const labelPoints = axes.map((_, i) => getPoint(i, 140));
 
   return (
     <div className={`relative ${className}`}>
       <svg
-        viewBox={`0 0 ${size} ${size}`}
-        className="w-full max-w-[420px] mx-auto drop-shadow-[0_0_30px_rgba(57,255,20,0.06)]"
+        viewBox={`-50 -10 ${size + 100} ${size + 20}`}
+        className="w-full max-w-[460px] mx-auto drop-shadow-[0_0_30px_rgba(57,255,20,0.06)]"
       >
         <defs>
           {/* Gradiente do polígono de dados */}
