@@ -2,7 +2,8 @@
 
 > *"Código é a minha arte. Segurança é o meu escudo. Automação é a minha magia."*
 
-Portfólio pessoal construído com **Next.js 14**, **TypeScript** e **Tailwind CSS**, no tema **Gruvbox** com elementos **neon** e gamificação.
+Portfólio pessoal construído com **Next.js 14**, **TypeScript** e **Tailwind CSS**, no tema **Gruvbox**.
+BAWBAW amigos!
 
 ## 🎮 Features
 
