@@ -97,7 +97,7 @@ export const teamShoutout = {
     { name: 'João Pedro Durigan', url: 'https://www.linkedin.com/in/jpdurigan/', photo: '/photos/joao-pedro-durigan.png' },
     { name: 'Marcos Oliveira', url: 'https://www.linkedin.com/in/marcos-oliveira-filho-5276a61b0/', photo: '/photos/marcao.png' },
     { name: 'Gabriel Santos', url: 'https://www.linkedin.com/in/gabriel-santos-silva-aaa99b139/', photo: '/photos/gabriel-silva.png' },
-    { name: 'Guilherme Gubany', url: 'https://www.linkedin.com/in/guilherme-homma-gubany-298073233/', photo: '/photos/guilherme-homma.png' },
+    { name: 'Guilherme Homma', url: 'https://www.linkedin.com/in/guilherme-homma-gubany-298073233/', photo: '/photos/guilherme-homma.png' },
   ],
 };
 
