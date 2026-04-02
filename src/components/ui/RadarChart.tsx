@@ -18,10 +18,9 @@ export default function RadarChart({
   const [hoveredAxis, setHoveredAxis] = useState<string | null>(null);
 
   const center = size / 2;
-  const maxRadius = size * 0.36;
-  const levels = 4; // anéis concêntricos (25%, 50%, 75%, 100%)
+  const maxRadius = size * 0.28;
+  const levels = 4;
   const angleStep = (2 * Math.PI) / axes.length;
-  // Começa do topo (-90°)
   const startAngle = -Math.PI / 2;
 
   const getPoint = (index: number, value: number) => {
@@ -66,7 +65,7 @@ export default function RadarChart({
   });
 
   // Label positions (um pouco fora do polígono)
-  const labelPoints = axes.map((_, i) => getPoint(i, 118));
+  const labelPoints = axes.map((_, i) => getPoint(i, 130));
 
   return (
     <div className={`relative ${className}`}>
