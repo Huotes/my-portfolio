@@ -1,25 +1,41 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import {
-  Radar, Trophy, TrendingUp, Crosshair, Sparkles,
-  Server, Monitor, Cloud, Shield, Blocks, Workflow, Users, Gamepad2,
-} from 'lucide-react';
-import RadarChart from '@/components/ui/RadarChart';
-import GlowCard from '@/components/ui/GlowCard';
-import { profileAxes, profileMeta } from '@/data/profile';
+  Radar,
+  Trophy,
+  TrendingUp,
+  Crosshair,
+  Sparkles,
+  Server,
+  Monitor,
+  Cloud,
+  Shield,
+  Blocks,
+  Workflow,
+  Users,
+  Gamepad2,
+} from "lucide-react";
+import RadarChart from "@/components/ui/RadarChart";
+import GlowCard from "@/components/ui/GlowCard";
+import { profileAxes, profileMeta } from "@/data/profile";
 
 export default function Profile() {
   // Média geral
   const avgScore = Math.round(
-    profileAxes.reduce((sum, a) => sum + a.value, 0) / profileAxes.length
+    profileAxes.reduce((sum, a) => sum + a.value, 0) / profileAxes.length,
   );
 
   // Top 3 skills
-  const topSkills = [...profileAxes].sort((a, b) => b.value - a.value).slice(0, 3);
+  const topSkills = [...profileAxes]
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 3);
 
   return (
-    <section id="profile" className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8 grid-bg">
+    <section
+      id="profile"
+      className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8 grid-bg"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -31,13 +47,16 @@ export default function Profile() {
           <div className="flex items-center gap-3 mb-4">
             <Radar className="w-5 h-5 text-neon-green" />
             <h2 className="font-display text-2xl sm:text-3xl tracking-wider text-gruvbox-fg1">
-              <span className="text-neon-green font-mono text-sm mr-2">03.</span>
+              <span className="text-neon-green font-mono text-sm mr-2">
+                03.
+              </span>
               Perfil Profissional
             </h2>
           </div>
           <div className="section-divider" />
           <p className="font-mono text-xs text-gruvbox-fg4 mt-4">
-            // scan completo de atributos — hover nos pontos para detalhes
+            <span className="text-neon-green">// </span>
+            scan completo de atributos — hover nos pontos para detalhes
           </p>
         </motion.div>
 
@@ -60,8 +79,10 @@ export default function Profile() {
               className="text-center mt-4"
             >
               <p className="font-mono text-xs text-gruvbox-fg4">
-                Score médio:{' '}
-                <span className="text-neon-green font-bold text-sm">{avgScore}</span>
+                Score médio:{" "}
+                <span className="text-neon-green font-bold text-sm">
+                  {avgScore}
+                </span>
                 <span className="text-gruvbox-gray">/100</span>
               </p>
             </motion.div>
@@ -115,16 +136,29 @@ export default function Profile() {
                   >
                     {(() => {
                       const IconMap: Record<string, typeof Server> = {
-                        server: Server, monitor: Monitor, container: Cloud,
-                        shield: Shield, blocks: Blocks, workflow: Workflow,
-                        users: Users, gamepad: Gamepad2,
+                        server: Server,
+                        monitor: Monitor,
+                        container: Cloud,
+                        shield: Shield,
+                        blocks: Blocks,
+                        workflow: Workflow,
+                        users: Users,
+                        gamepad: Gamepad2,
                       };
                       const SkillIcon = IconMap[skill.icon] || Server;
-                      return <SkillIcon size={18} style={{ color: skill.neonColor }} className="shrink-0" />;
+                      return (
+                        <SkillIcon
+                          size={18}
+                          style={{ color: skill.neonColor }}
+                          className="shrink-0"
+                        />
+                      );
                     })()}
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-1">
-                        <span className="font-mono text-xs text-gruvbox-fg2">{skill.label}</span>
+                        <span className="font-mono text-xs text-gruvbox-fg2">
+                          {skill.label}
+                        </span>
                         <span
                           className="font-mono text-xs font-bold"
                           style={{ color: skill.neonColor }}
@@ -163,8 +197,12 @@ export default function Profile() {
                 <ul className="space-y-2">
                   {profileMeta.strengths.map((s, i) => (
                     <li key={i} className="flex items-start gap-1.5">
-                      <span className="text-neon-green text-[10px] mt-0.5 shrink-0">▹</span>
-                      <span className="font-mono text-[10px] text-gruvbox-fg3 leading-snug">{s}</span>
+                      <span className="text-neon-green text-[10px] mt-0.5 shrink-0">
+                        ▹
+                      </span>
+                      <span className="font-mono text-[10px] text-gruvbox-fg3 leading-snug">
+                        {s}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -180,8 +218,12 @@ export default function Profile() {
                 <ul className="space-y-2">
                   {profileMeta.growthAreas.map((g, i) => (
                     <li key={i} className="flex items-start gap-1.5">
-                      <span className="text-neon-orange text-[10px] mt-0.5 shrink-0">▹</span>
-                      <span className="font-mono text-[10px] text-gruvbox-fg3 leading-snug">{g}</span>
+                      <span className="text-neon-orange text-[10px] mt-0.5 shrink-0">
+                        ▹
+                      </span>
+                      <span className="font-mono text-[10px] text-gruvbox-fg3 leading-snug">
+                        {g}
+                      </span>
                     </li>
                   ))}
                 </ul>

@@ -1,10 +1,18 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Cpu, Code, Database, Cloud, Shield, Wrench, Gamepad2 } from 'lucide-react';
-import XPBar from '@/components/ui/XPBar';
-import { skills, skillCategories, type SkillCategory } from '@/data/skills';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Cpu,
+  Code,
+  Database,
+  Cloud,
+  Shield,
+  Wrench,
+  Gamepad2,
+} from "lucide-react";
+import XPBar from "@/components/ui/XPBar";
+import { skills, skillCategories, type SkillCategory } from "@/data/skills";
 
 const categoryIcons: Record<SkillCategory, typeof Code> = {
   languages: Code,
@@ -17,16 +25,21 @@ const categoryIcons: Record<SkillCategory, typeof Code> = {
 };
 
 export default function Skills() {
-  const [activeCategory, setActiveCategory] = useState<SkillCategory | 'all'>('all');
+  const [activeCategory, setActiveCategory] = useState<SkillCategory | "all">(
+    "all",
+  );
   const categories = Object.keys(skillCategories) as SkillCategory[];
 
   const filteredSkills =
-    activeCategory === 'all'
+    activeCategory === "all"
       ? skills
       : skills.filter((s) => s.category === activeCategory);
 
   return (
-    <section id="skills" className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8 grid-bg">
+    <section
+      id="skills"
+      className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8 grid-bg"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -38,13 +51,17 @@ export default function Skills() {
           <div className="flex items-center gap-3 mb-4">
             <Cpu className="w-5 h-5 text-neon-pink" />
             <h2 className="font-display text-2xl sm:text-3xl tracking-wider text-gruvbox-fg1">
-              <span className="text-neon-green font-mono text-sm mr-2">05.</span>
+              <span className="text-neon-green font-mono text-sm mr-2">
+                05.
+              </span>
               Skill Tree
             </h2>
           </div>
           <div className="section-divider" />
           <p className="font-mono text-xs text-gruvbox-fg4 mt-4">
-            // {skills.length} habilidades desbloqueadas — selecione uma categoria para filtrar
+            <span className="text-neon-green">// </span>
+            {skills.length} habilidades desbloqueadas — selecione uma categoria
+            para filtrar
           </p>
         </motion.div>
 
@@ -56,11 +73,11 @@ export default function Skills() {
           className="flex flex-wrap gap-2 mb-10"
         >
           <button
-            onClick={() => setActiveCategory('all')}
+            onClick={() => setActiveCategory("all")}
             className={`px-3 py-1.5 font-mono text-xs rounded border transition-all duration-300 ${
-              activeCategory === 'all'
-                ? 'border-neon-green text-neon-green bg-neon-green/10 shadow-[0_0_8px_rgba(57,255,20,0.2)]'
-                : 'border-gruvbox-bg3 text-gruvbox-fg4 hover:border-gruvbox-fg4'
+              activeCategory === "all"
+                ? "border-neon-green text-neon-green bg-neon-green/10 shadow-[0_0_8px_rgba(57,255,20,0.2)]"
+                : "border-gruvbox-bg3 text-gruvbox-fg4 hover:border-gruvbox-fg4"
             }`}
           >
             Todas ({skills.length})
@@ -77,8 +94,8 @@ export default function Skills() {
                 onClick={() => setActiveCategory(cat)}
                 className={`inline-flex items-center gap-1.5 px-3 py-1.5 font-mono text-xs rounded border transition-all duration-300 ${
                   isActive
-                    ? 'bg-opacity-10 shadow-[0_0_8px_rgba(255,255,255,0.1)]'
-                    : 'border-gruvbox-bg3 text-gruvbox-fg4 hover:border-gruvbox-fg4'
+                    ? "bg-opacity-10 shadow-[0_0_8px_rgba(255,255,255,0.1)]"
+                    : "border-gruvbox-bg3 text-gruvbox-fg4 hover:border-gruvbox-fg4"
                 }`}
                 style={
                   isActive
@@ -117,7 +134,11 @@ export default function Skills() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.03 }}
                 >
-                  <XPBar label={skill.name} level={skill.level} delay={i * 0.03} />
+                  <XPBar
+                    label={skill.name}
+                    level={skill.level}
+                    delay={i * 0.03}
+                  />
                 </motion.div>
               ))}
           </motion.div>
@@ -131,10 +152,22 @@ export default function Skills() {
           className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4"
         >
           {[
-            { label: 'Linguagens', value: skills.filter((s) => s.category === 'languages').length, color: '#39ff14' },
-            { label: 'Lendárias', value: skills.filter((s) => s.level >= 90).length, color: '#ff006e' },
-            { label: 'Épicas', value: skills.filter((s) => s.level >= 75 && s.level < 90).length, color: '#bf00ff' },
-            { label: 'Total Skills', value: skills.length, color: '#00f0ff' },
+            {
+              label: "Linguagens",
+              value: skills.filter((s) => s.category === "languages").length,
+              color: "#39ff14",
+            },
+            {
+              label: "Lendárias",
+              value: skills.filter((s) => s.level >= 90).length,
+              color: "#ff006e",
+            },
+            {
+              label: "Épicas",
+              value: skills.filter((s) => s.level >= 75 && s.level < 90).length,
+              color: "#bf00ff",
+            },
+            { label: "Total Skills", value: skills.length, color: "#00f0ff" },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -142,7 +175,10 @@ export default function Skills() {
             >
               <p
                 className="font-display text-2xl sm:text-3xl font-bold"
-                style={{ color: stat.color, textShadow: `0 0 10px ${stat.color}40` }}
+                style={{
+                  color: stat.color,
+                  textShadow: `0 0 10px ${stat.color}40`,
+                }}
               >
                 {stat.value}
               </p>

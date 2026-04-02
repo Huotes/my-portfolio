@@ -160,7 +160,7 @@ export default function Certificates() {
           viewport={{ once: true }}
           className="text-center font-mono text-xs text-gruvbox-gray mt-8"
         >
-          // {certificates.length} loot drops coletados — a jornada nunca para
+          {/* {certificates.length} loot drops coletados — a jornada nunca para */}
         </motion.p>
       </div>
 
