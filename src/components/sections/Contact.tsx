@@ -55,7 +55,7 @@ export default function Contact() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <MessageSquare className="w-5 h-5 text-neon-green" />
             <h2 className="font-display text-2xl sm:text-3xl tracking-wider text-gruvbox-fg1">
-              <span className="text-neon-green font-mono text-sm mr-2">06.</span>
+              <span className="text-neon-green font-mono text-sm mr-2">09.</span>
               Contato
             </h2>
           </div>
@@ -68,9 +68,8 @@ export default function Contact() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-gruvbox-fg3 text-sm sm:text-base max-w-lg mx-auto leading-relaxed"
           >
-            Tem um projeto em mente? Quer trocar uma ideia sobre tech?
-            <br />
-            Manda uma mensagem — estou sempre aberto a novos desafios e conexões.
+            Tem um projeto que precisa de um coringa no time? Quer trocar ideia sobre
+            infra, segurança ou automatizar algo impossível? Cola comigo.
           </motion.p>
 
           <motion.p
@@ -80,7 +79,7 @@ export default function Contact() {
             transition={{ delay: 0.3 }}
             className="mt-3 font-mono text-xs text-gruvbox-fg4"
           >
-            &quot;O próximo bug a ser resolvido pode ser o começo de uma grande parceria.&quot;
+            &quot;O próximo <span className="text-neon-green">git commit</span> pode ser o começo de algo grande.&quot;
           </motion.p>
         </motion.div>
 

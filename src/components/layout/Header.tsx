@@ -7,10 +7,12 @@ import { Menu, X, Terminal } from 'lucide-react';
 const navItems = [
   { label: 'Início', href: '#hero' },
   { label: 'Sobre', href: '#about' },
+  { label: 'História', href: '#journey' },
   { label: 'Perfil', href: '#profile' },
-  { label: 'Experiência', href: '#experience' },
+  { label: 'XP', href: '#experience' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Certificados', href: '#certificates' },
+  { label: 'Projetos', href: '#projects' },
+  { label: 'Lab', href: '#lab' },
   { label: 'Contato', href: '#contact' },
 ];
 

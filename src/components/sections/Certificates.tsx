@@ -52,7 +52,7 @@ export default function Certificates() {
           <div className="flex items-center gap-3 mb-4">
             <Award className="w-5 h-5 text-neon-orange" />
             <h2 className="font-display text-2xl sm:text-3xl tracking-wider text-gruvbox-fg1">
-              <span className="text-neon-green font-mono text-sm mr-2">05.</span>
+              <span className="text-neon-green font-mono text-sm mr-2">07.</span>
               Certificados
             </h2>
           </div>
@@ -134,7 +134,7 @@ export default function Certificates() {
           viewport={{ once: true }}
           className="text-center font-mono text-xs text-gruvbox-gray mt-8"
         >
-          // {certificates.length} certificados coletados — keep grinding! 🎮
+          // {certificates.length} loot drops coletados — a jornada nunca para
         </motion.p>
       </div>
     </section>

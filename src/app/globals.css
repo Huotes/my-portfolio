@@ -377,3 +377,12 @@ body::before {
 section {
   scroll-margin-top: 80px;
 }
+
+/* ═══════════════════════════════════════════════════════
+   PIXEL ART RENDERING
+   ═══════════════════════════════════════════════════════ */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}

@@ -35,7 +35,7 @@ export const profileMeta = {
     'Adquirir certificações oficiais de segurança da informação',
     'Evoluir de guia técnico para liderança formal de squads',
   ],
-  quote: '"Automatizo o que existe. Protejo o que importa. Projeto o que vem depois."',
+  quote: '"Não sou o melhor em uma coisa — sou perigosamente bom em várias."',
 };
 
 /*

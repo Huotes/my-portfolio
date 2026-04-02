@@ -38,7 +38,7 @@ export default function Skills() {
           <div className="flex items-center gap-3 mb-4">
             <Cpu className="w-5 h-5 text-neon-pink" />
             <h2 className="font-display text-2xl sm:text-3xl tracking-wider text-gruvbox-fg1">
-              <span className="text-neon-green font-mono text-sm mr-2">04.</span>
+              <span className="text-neon-green font-mono text-sm mr-2">05.</span>
               Skill Tree
             </h2>
           </div>

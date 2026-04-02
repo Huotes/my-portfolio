@@ -104,9 +104,9 @@ export default function Hero() {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="max-w-2xl mx-auto text-gruvbox-fg3 text-sm sm:text-base leading-relaxed mb-4"
         >
-          &quot;Automatizo o que existe. Protejo o que importa.
+          &quot;O coringa que você precisa para o seu baralho.
           <br className="hidden sm:block" />
-          Projeto o que vem depois.&quot;
+          Automatizo, protejo e entrego.&quot;
         </motion.p>
 
         {/* Stats */}

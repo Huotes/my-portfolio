@@ -31,7 +31,7 @@ export default function Profile() {
           <div className="flex items-center gap-3 mb-4">
             <Radar className="w-5 h-5 text-neon-green" />
             <h2 className="font-display text-2xl sm:text-3xl tracking-wider text-gruvbox-fg1">
-              <span className="text-neon-green font-mono text-sm mr-2">02.</span>
+              <span className="text-neon-green font-mono text-sm mr-2">03.</span>
               Perfil Profissional
             </h2>
           </div>
