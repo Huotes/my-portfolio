@@ -361,7 +361,7 @@ export default function PixelGuide() {
   const [reactionTime, setReactionTime] = useState(0);
   const [reactionBest, setReactionBest] = useState(999);
   const reactionStart = useRef(0);
-  const reactionTimeout = useRef<NodeJS.Timeout>();
+  const reactionTimeout = useRef<NodeJS.Timeout | null>(null);
   const [triviaIdx, setTriviaIdx] = useState(0);
   const [triviaScore, setTriviaScore] = useState(0);
   const [triviaMsg, setTriviaMsg] = useState("");
