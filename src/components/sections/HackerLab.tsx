@@ -56,16 +56,16 @@ export default function HackerLab() {
             </div>
             <div className="p-4 sm:p-6 grid sm:grid-cols-2 gap-6">
               {/* ASCII art side */}
-              <div className="font-mono text-[10px] sm:text-xs leading-tight text-neon-green whitespace-pre">
-                {`    ╔══════════════════════╗
-                      ║   ┌─┐ ┌┬┐┬ ┬┌─┐┌─┐   ║
-                      ║   ├─┤  │ ├─┤│ │└─┐   ║
-                      ║   ┴ ┴  ┴ ┴ ┴└─┘└─┘   ║
-                      ║  ┌┬┐┌─┐┬  ┬          ║
-                      ║   ││├┤ └┐┌┘          ║
-                      ║  ─┴┘└─┘ └┘           ║
-                      ╚══════════════════════╝`}
-              </div>
+              <pre className="font-mono text-[10px] sm:text-xs leading-tight text-neon-green">
+              {`+----------------------+
+              |   /\\  /\\  /\\  /\\     |
+              |  /__\\/__\\/__\\/__\\    |
+              |  \\  /\\  /\\  /\\  /    |
+              |   \\/  \\/  \\/  \\/     |
+              |     A T H O S        |
+              |        DEV           |
+              +----------------------+`}
+              </pre>
 
               {/* System info */}
               <div className="font-mono text-xs space-y-1">
