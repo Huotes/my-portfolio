@@ -128,8 +128,12 @@ export default function About() {
             {/* Player card */}
             <GlowCard neonColor="green">
               <div className="text-center mb-4">
-                <div className="w-16 h-16 mx-auto mb-3 rounded-full border-2 border-neon-green/40 bg-gruvbox-bg2 flex items-center justify-center text-2xl">
-                  🧙
+                <div className="w-16 h-16 mx-auto mb-3 rounded-full border-2 border-neon-green/40 overflow-hidden">
+                  <img
+                    src="/photos/me.png"
+                    alt="Athos Aurélio"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="font-display text-sm tracking-wider text-neon-green">
                   {playerStats.title}

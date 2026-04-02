@@ -2,10 +2,9 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { BookOpen, ChevronRight, Heart, ExternalLink, Users } from 'lucide-react';
+import { BookOpen, ChevronRight, Heart } from 'lucide-react';
 import GlowCard from '@/components/ui/GlowCard';
 import { journeyChapters, teamShoutout, funFacts } from '@/data/story';
-import { IconLinkedIn } from '@/components/ui/SocialIcons';
 
 export default function Journey() {
   const [activeChapter, setActiveChapter] = useState(0);
@@ -142,27 +141,45 @@ export default function Journey() {
             <div className="flex items-center gap-2 mb-3">
               <Heart size={16} className="text-neon-pink" />
               <h3 className="font-display text-xs tracking-wider text-neon-pink">
-                Shoutout
+                Shoutout — O Time que me Moldou
               </h3>
             </div>
-            <p className="text-xs text-gruvbox-fg3 leading-relaxed mb-4">
+            <p className="text-xs text-gruvbox-fg3 leading-relaxed mb-5">
               {teamShoutout.message}
             </p>
-            <div className="flex flex-wrap gap-2">
-              {teamShoutout.members.map((member) => (
-                <a
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
+              {teamShoutout.members.map((member, i) => (
+                <motion.a
                   key={member.name}
                   href={member.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-gruvbox-bg0/60 border border-gruvbox-bg2/50 hover:border-neon-pink/30 transition-all group"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 + i * 0.08, type: 'spring' }}
+                  whileHover={{ y: -4, scale: 1.05 }}
+                  className="text-center group"
                 >
-                  <IconLinkedIn size={12} className="text-gruvbox-fg4 group-hover:text-neon-blue transition-colors" />
-                  <span className="font-mono text-[11px] text-gruvbox-fg3 group-hover:text-gruvbox-fg1 transition-colors">
+                  {/* Photo frame */}
+                  <div className="relative mx-auto w-14 h-14 sm:w-16 sm:h-16 mb-2">
+                    {/* Neon ring */}
+                    <div className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-neon-pink/50 transition-all group-hover:shadow-[0_0_12px_rgba(255,0,110,0.25)]" />
+                    {/* Photo */}
+                    <img
+                      src={member.photo}
+                      alt={member.name}
+                      className="w-full h-full rounded-full object-cover border-2 border-gruvbox-bg3/60 group-hover:border-neon-pink/40 transition-all grayscale group-hover:grayscale-0"
+                      loading="lazy"
+                    />
+                    {/* Online indicator */}
+                    <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-neon-green border-2 border-gruvbox-bg0 shadow-[0_0_6px_rgba(57,255,20,0.5)]" />
+                  </div>
+                  {/* Name */}
+                  <p className="font-mono text-[9px] sm:text-[10px] text-gruvbox-fg4 group-hover:text-gruvbox-fg1 transition-colors leading-tight">
                     {member.name}
-                  </span>
-                  <ExternalLink size={8} className="text-gruvbox-gray opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
+                  </p>
+                </motion.a>
               ))}
             </div>
           </GlowCard>
