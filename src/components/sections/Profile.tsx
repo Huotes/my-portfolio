@@ -55,8 +55,7 @@ export default function Profile() {
           </div>
           <div className="section-divider" />
           <p className="font-mono text-xs text-gruvbox-fg4 mt-4">
-            <span className="text-neon-green">// </span>
-            scan completo de atributos — hover nos pontos para detalhes
+            {"// scan completo de atributos — hover nos pontos para detalhes"}
           </p>
         </motion.div>
 

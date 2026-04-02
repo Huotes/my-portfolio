@@ -1,22 +1,46 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
-  Award, ExternalLink, FileText, Shield, Code, Server, Cpu,
-  Lock, Globe, Gamepad2, Database, Cloud, X, Eye, Clock,
-} from 'lucide-react';
-import GlowCard from '@/components/ui/GlowCard';
-import { certificates, type Certificate } from '@/data/certificates';
+  Award,
+  ExternalLink,
+  FileText,
+  Shield,
+  Code,
+  Server,
+  Cpu,
+  Lock,
+  Globe,
+  Gamepad2,
+  Database,
+  Cloud,
+  X,
+  Eye,
+  Clock,
+} from "lucide-react";
+import GlowCard from "@/components/ui/GlowCard";
+import { certificates, type Certificate } from "@/data/certificates";
 
 const iconMap: Record<string, typeof Code> = {
-  shield: Shield, code: Code, server: Server, cpu: Cpu,
-  lock: Lock, globe: Globe, gamepad: Gamepad2,
-  database: Database, cloud: Cloud,
+  shield: Shield,
+  code: Code,
+  server: Server,
+  cpu: Cpu,
+  lock: Lock,
+  globe: Globe,
+  gamepad: Gamepad2,
+  database: Database,
+  cloud: Cloud,
 };
 
-const neonColors: Array<'green' | 'blue' | 'pink' | 'orange' | 'purple'> = [
-  'green', 'blue', 'pink', 'orange', 'purple',
+const neonColors: Array<"green" | "blue" | "pink" | "orange" | "purple"> = [
+  "green",
+  "blue",
+  "pink",
+  "orange",
+  "purple",
 ];
 
 export default function Certificates() {
@@ -25,7 +49,10 @@ export default function Certificates() {
   const totalHours = certificates.reduce((sum, c) => sum + (c.hours || 0), 0);
 
   return (
-    <section id="certificates" className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
+    <section
+      id="certificates"
+      className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
@@ -37,15 +64,20 @@ export default function Certificates() {
           <div className="flex items-center gap-3 mb-4">
             <Award className="w-5 h-5 text-neon-orange" />
             <h2 className="font-display text-2xl sm:text-3xl tracking-wider text-gruvbox-fg1">
-              <span className="text-neon-green font-mono text-sm mr-2">07.</span>
+              <span className="text-neon-green font-mono text-sm mr-2">
+                07.
+              </span>
               Certificados
             </h2>
           </div>
           <div className="section-divider" />
           <div className="mt-4 flex flex-wrap items-center gap-4 font-mono text-xs text-gruvbox-fg4">
             <span>
-              <span className="text-neon-green">$</span> find ~/certificates -type f | wc -l
-              <span className="text-gruvbox-fg2 ml-2">{certificates.length}</span>
+              <span className="text-neon-green">$</span> find ~/certificates
+              -type f | wc -l
+              <span className="text-gruvbox-fg2 ml-2">
+                {certificates.length}
+              </span>
             </span>
             <span className="text-gruvbox-bg3">|</span>
             <span className="flex items-center gap-1">
@@ -70,14 +102,18 @@ export default function Certificates() {
                     onClick={() => setPreviewCert(cert)}
                     className="w-full mb-3 rounded overflow-hidden border border-gruvbox-bg2/30 hover:border-neon-green/30 transition-all group relative cursor-pointer"
                   >
-                    <img
-                      src={cert.thumbnailPath}
+                    <Image
+                      src={cert.thumbnailPath!}
                       alt={cert.title}
+                      width={400}
+                      height={96}
                       className="w-full h-24 object-cover object-top opacity-70 group-hover:opacity-100 transition-opacity"
-                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gruvbox-bg0/40 group-hover:bg-transparent transition-colors flex items-center justify-center">
-                      <Eye size={16} className="text-gruvbox-fg4 group-hover:text-neon-green transition-colors" />
+                      <Eye
+                        size={16}
+                        className="text-gruvbox-fg4 group-hover:text-neon-green transition-colors"
+                      />
                     </div>
                   </button>
                 )}
@@ -89,7 +125,10 @@ export default function Certificates() {
                     className="w-full mb-3 rounded overflow-hidden border border-gruvbox-bg2/30 hover:border-neon-green/30 transition-all group relative cursor-pointer h-24 bg-gruvbox-bg0/60 flex items-center justify-center"
                   >
                     <div className="text-center">
-                      <FileText size={20} className="mx-auto text-gruvbox-fg4 group-hover:text-neon-green transition-colors mb-1" />
+                      <FileText
+                        size={20}
+                        className="mx-auto text-gruvbox-fg4 group-hover:text-neon-green transition-colors mb-1"
+                      />
                       <span className="font-mono text-[9px] text-gruvbox-gray group-hover:text-gruvbox-fg4 transition-colors">
                         Visualizar PDF
                       </span>
@@ -127,7 +166,7 @@ export default function Certificates() {
 
                 {/* Actions */}
                 <div className="flex items-center gap-2 pt-2 border-t border-gruvbox-bg2/30">
-                  {cert.credentialUrl && cert.credentialUrl !== '#' && (
+                  {cert.credentialUrl && cert.credentialUrl !== "#" && (
                     <a
                       href={cert.credentialUrl}
                       target="_blank"
@@ -160,7 +199,8 @@ export default function Certificates() {
           viewport={{ once: true }}
           className="text-center font-mono text-xs text-gruvbox-gray mt-8"
         >
-          {/* {certificates.length} loot drops coletados — a jornada nunca para */}
+          {"// "}
+          {certificates.length} loot drops coletados — a jornada nunca para
         </motion.p>
       </div>
 
@@ -184,7 +224,9 @@ export default function Certificates() {
               {/* Modal header */}
               <div className="flex items-center justify-between px-4 py-3 bg-gruvbox-bg1 border-b border-gruvbox-bg2">
                 <div>
-                  <h3 className="font-display text-sm text-gruvbox-fg1">{previewCert.title}</h3>
+                  <h3 className="font-display text-sm text-gruvbox-fg1">
+                    {previewCert.title}
+                  </h3>
                   <p className="font-mono text-[10px] text-gruvbox-fg4">
                     {previewCert.institution} • {previewCert.date}
                   </p>
@@ -200,9 +242,11 @@ export default function Certificates() {
               {/* Modal content */}
               <div className="p-4 overflow-auto max-h-[calc(85vh-60px)]">
                 {previewCert.thumbnailPath ? (
-                  <img
+                  <Image
                     src={previewCert.thumbnailPath}
                     alt={previewCert.title}
+                    width={800}
+                    height={600}
                     className="w-full rounded border border-gruvbox-bg2/30"
                   />
                 ) : previewCert.pdfPath ? (

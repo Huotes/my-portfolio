@@ -59,7 +59,7 @@ export default function Skills() {
           </div>
           <div className="section-divider" />
           <p className="font-mono text-xs text-gruvbox-fg4 mt-4">
-            <span className="text-neon-green">// </span>
+            {"// "}
             {skills.length} habilidades desbloqueadas — selecione uma categoria
             para filtrar
           </p>
