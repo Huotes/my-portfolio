@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   FolderGit2, ExternalLink, Gamepad2, Terminal, Wrench,
-  Server, Bot, FileCode, Code,
+  Server, Bot, FileCode, Code, CloudCog,
 } from 'lucide-react';
 import GlowCard from '@/components/ui/GlowCard';
 import { projects, type Project } from '@/data/projects';
@@ -16,6 +16,7 @@ const typeIcons: Record<Project['type'], typeof Code> = {
   automation: Bot,
   dotfiles: Terminal,
   oss: FileCode,
+  devops: CloudCog,
 };
 
 const typeLabels: Record<Project['type'], string> = {
@@ -25,6 +26,7 @@ const typeLabels: Record<Project['type'], string> = {
   automation: 'Automation',
   dotfiles: 'Dotfiles',
   oss: 'Open Source',
+  devops: 'DevOps',
 };
 
 type FilterType = 'all' | Project['type'];
@@ -66,9 +68,9 @@ export default function Projects() {
             <span className="text-gruvbox-fg2">ls -la --sort=relevance</span>
             <br />
             <span className="text-gruvbox-fg4">
-              total {projects.length} — {projects.filter((p) => p.type === 'game').length} games,{' '}
+              total {projects.length} — {projects.filter((p) => p.type === 'devops').length} devops labs,{' '}
               {projects.filter((p) => p.type === 'tool').length} tools,{' '}
-              {projects.filter((p) => p.type === 'dotfiles').length} dotfiles
+              {projects.filter((p) => p.type === 'game').length} games
             </span>
           </div>
         </motion.div>
@@ -192,7 +194,7 @@ export default function Projects() {
           className="text-center mt-8"
         >
           <a
-            href="https://github.com/Huotes?tab=repositories"
+            href="https://github.com/rathosops?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 font-mono text-xs text-gruvbox-fg4 hover:text-neon-green transition-colors border border-gruvbox-bg3 hover:border-neon-green/30 px-4 py-2 rounded"

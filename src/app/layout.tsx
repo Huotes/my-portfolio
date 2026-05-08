@@ -2,18 +2,22 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Athos Aurélio | Backend Warlock & DevSecOps Aspirant',
+  title: 'Athos Aurélio | DevOps & Automation Engineer',
   description:
-    'Portfólio de Athos Aurélio — Generalista apaixonado por backend, infraestrutura, segurança da informação e desenvolvimento de jogos. 6+ anos de experiência transformando código em soluções.',
+    'Portfólio de Athos Aurélio — DevOps em transição estruturada, com foco em automação, Linux, Docker, CI/CD, cloud, segurança de pipelines e observabilidade.',
   keywords: [
     'Athos Aurélio',
-    'Backend Developer',
+    'DevOps',
+    'Automation Engineer',
     'Python',
-    'Django',
-    'Flask',
+    'Golang',
+    'Docker',
+    'Kubernetes',
+    'AWS',
+    'CI/CD',
+    'Linux',
     'DevSecOps',
-    'Full Stack',
-    'Game Developer',
+    'Platform Engineering',
     'Cybersecurity',
   ],
   authors: [{ name: 'Athos Aurélio' }],
@@ -23,8 +27,8 @@ export const metadata: Metadata = {
     apple: '/logo.svg',
   },
   openGraph: {
-    title: 'Athos Aurélio | Backend Warlock',
-    description: 'Generalista que se diverte com backend, infra e segurança.',
+    title: 'Athos Aurélio | DevOps & Automation Engineer',
+    description: 'Backend experience turned into secure, automated and observable delivery pipelines.',
     url: 'https://athosaurelio.com.br',
     siteName: 'Athos Aurélio Portfolio',
     locale: 'pt_BR',

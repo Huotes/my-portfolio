@@ -31,7 +31,7 @@ export const NEON = {
 } as const;
 
 export const SOCIAL_LINKS = {
-  github: 'https://github.com/Huotes',
+  github: 'https://github.com/rathosops',
   linkedin: 'https://www.linkedin.com/in/athosaurelio/',
   email: 'aureliodosol@gmail.com',
   phone: '+5518997896156',

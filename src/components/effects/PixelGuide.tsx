@@ -68,7 +68,7 @@ const chatQA = [
   },
   {
     q: "Quais as top skills?",
-    a: "Automação, DevOps e Backend. Python é a linguagem do coração.",
+    a: "DevOps, automação e backend. Python é a linguagem do coração.",
   },
   {
     q: "Ele faz jogos?",

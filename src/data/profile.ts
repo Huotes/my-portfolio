@@ -19,23 +19,23 @@ export const profileAxes: ProfileAxis[] = [
 ];
 
 export const profileMeta = {
-  archetype: 'Pi-Shaped Developer',
+  archetype: 'DevOps-Oriented Engineer',
   title: 'O Coringa que Você Precisa',
-  subtitle: 'Especialista em Backend + DevOps + Security com base generalista ampla',
+  subtitle: 'Backend forte migrando para DevOps, automação, cloud e segurança de pipelines',
   description:
-    'Perfil raro que combina profundidade em infraestrutura, automação e segurança com competência sólida em frontend e arquitetura. Um profissional que não apenas escreve código — projeta sistemas completos, automatiza processos e protege o que construiu.',
+    'Perfil que transforma experiência em backend em entrega confiável: containers, pipelines, Linux, cloud, observabilidade e segurança aplicada desde o início do ciclo.',
   strengths: [
-    'Automação end-to-end (pipelines, ETL, scrapers, analytics)',
-    'Infraestrutura como código (Docker, K8s, CI/CD, cloud)',
+    'Automação end-to-end para build, testes, segurança e deploy',
+    'Infraestrutura e runtime com Docker, Linux, CI/CD, cloud e Kubernetes',
     'Arquitetura de sistemas com trade-offs claros',
     'Segurança ofensiva e defensiva (pentest, OWASP, hardening)',
   ],
   growthAreas: [
-    'Expandir experiência com SecOps no geral',
-    'Adquirir certificações oficiais de segurança da informação',
-    'Evoluir de guia técnico para liderança formal de squads',
+    'Aprofundar Kubernetes, Helm e troubleshooting em produção',
+    'Consolidar Terraform/OpenTofu, GitOps e observabilidade',
+    'Adicionar certificações cloud e segurança ao roadmap DevOps',
   ],
-  quote: '"Não sou o melhor em uma coisa — sou perigosamente bom em várias."',
+  quote: '"Backend experience loaded. Linux mindset enabled. Pipeline security initialized."',
 };
 
 /*

@@ -83,7 +83,7 @@ export default function HackerLab() {
                 <div>
                   <span className="text-neon-green">Kernel</span>
                   <span className="text-gruvbox-fg4">: </span>
-                  <span className="text-gruvbox-fg2">Backend v6.x LTS</span>
+                  <span className="text-gruvbox-fg2">DevOps Pipeline v2026</span>
                 </div>
                 <div>
                   <span className="text-neon-green">Uptime</span>

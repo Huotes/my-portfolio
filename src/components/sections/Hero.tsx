@@ -11,11 +11,11 @@ import { useCountUp } from '@/hooks/useScrollAnimation';
 import { useEffect, useState } from 'react';
 
 const roles = [
-  'Sr Backend Engineer',
-  'Python Enthusiast',
-  'DevSecOps Aspirant',
-  'Game Developer',
-  'Automation Wizard',
+  'DevOps Engineer',
+  'Automation Engineer',
+  'DevSecOps Builder',
+  'Linux & CI/CD Operator',
+  'Platform Engineering Path',
 ];
 
 export default function Hero() {
@@ -106,7 +106,7 @@ export default function Hero() {
         >
           &quot;O coringa que você precisa para o seu baralho.
           <br className="hidden sm:block" />
-          Automatizo, protejo e entrego.&quot;
+          Transformo código em pipelines seguros, automatizados e observáveis.&quot;
         </motion.p>
 
         {/* Stats */}
@@ -122,7 +122,7 @@ export default function Hero() {
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-neon-blue shadow-[0_0_6px_#00f0ff]" />
-            <span className="text-gruvbox-fg4">Full Stack Warrior</span>
+            <span className="text-gruvbox-fg4">DevOps em transição</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-neon-pink shadow-[0_0_6px_#ff006e]" />

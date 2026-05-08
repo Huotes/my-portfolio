@@ -100,15 +100,15 @@ export default function About() {
                     "# O Coringa que você precisa",
                     "",
                     "Muito prazer, sou Athos Aurélio.",
-                    "Desenvolvedor Sênior, 21 anos,",
+                    "DevOps em transição estruturada, 21 anos,",
                     "escrevendo código desde os 15.",
                     "",
-                    "Generalista full-stack apaixonado por",
-                    "resolver problemas e facilitar a vida",
-                    "das pessoas através da tecnologia.",
+                    "Transformo experiência backend em",
+                    "automação, containers, pipelines seguros",
+                    "e ambientes observáveis.",
                     "",
-                    "Meu sonho? Tornar-me um DevSecOps capaz",
-                    "de resolver problemas de milhões.",
+                    "Meu foco? DevOps, DevSecOps, cloud",
+                    "e engenharia de plataforma.",
                   ]}
                   typingSpeed={20}
                 />
@@ -131,11 +131,14 @@ export default function About() {
                 saúde ocupacional
               </span>{" "}
               — cada experiência moldou um profissional versátil, que entrega
-              soluções robustas em backend, automatiza processos complexos e
-              protege o que constrói.
+              soluções robustas em backend e agora direciona essa base para
+              automação de deploy, CI/CD, Linux, containers e segurança de
+              pipelines.
             </p>
 
             <p className="font-mono text-xs text-gruvbox-fg4 border-l-2 border-neon-green/30 pl-4">
+              &quot;Meu alvo é simples: menos trabalho manual, mais entrega
+              confiável, mais segurança no caminho até produção.&quot;
               &quot;O melhor código é aquele que resolve o problema de alguém. O
               segundo melhor é aquele que você automatizou para nunca mais
               precisar escrever.&quot;

@@ -74,12 +74,12 @@ export const skills: Skill[] = [
 ];
 
 export const playerStats = {
-  class: 'Backend Warlock',
+  class: 'DevOps Automator',
   title: 'O Coringa',
   level: 21,
   totalXP: 15000,
   nextLevelXP: 20000,
-  guild: 'DevSecOps Aspirant',
+  guild: 'DevOps / DevSecOps Path',
   achievements: [
     { name: 'First Blood', description: 'Primeiro commit profissional', icon: 'swords' },
     { name: 'Polyglot', description: 'Dominou 5+ linguagens', icon: 'globe' },
