@@ -34,5 +34,6 @@ export const SOCIAL_LINKS = {
   github: 'https://github.com/rathosops',
   linkedin: 'https://www.linkedin.com/in/athosaurelio/',
   email: 'aureliodosol@gmail.com',
-  phone: '+5518997896156',
+  phone: '+5518996704980',
+  gruvboxhouse: 'https://www.gruvboxhouse.com.br/',
 } as const;

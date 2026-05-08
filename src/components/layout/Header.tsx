@@ -13,6 +13,7 @@ const navItems = [
   { label: "XP", href: "#experience" },
   { label: "Skills", href: "#skills" },
   { label: "Projetos", href: "#projects" },
+  { label: "House", href: "#gruvboxhouse" },
   { label: "Certs", href: "#certificates" },
   { label: "Lab", href: "#lab" },
   { label: "Contato", href: "#contact" },

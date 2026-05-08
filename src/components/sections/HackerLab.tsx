@@ -30,7 +30,7 @@ export default function HackerLab() {
             <Terminal className="w-5 h-5 text-neon-green" />
             <h2 className="font-display text-2xl sm:text-3xl tracking-wider text-gruvbox-fg1">
               <span className="text-neon-green font-mono text-sm mr-2">
-                08.
+                09.
               </span>
               Hacker Lab
             </h2>

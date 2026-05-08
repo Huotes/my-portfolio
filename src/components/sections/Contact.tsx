@@ -18,7 +18,7 @@ const contactLinks = [
   {
     icon: IconGitHub,
     label: 'GitHub',
-    value: '@Huotes',
+    value: '@rathosops',
     href: SOCIAL_LINKS.github,
     color: 'text-neon-green',
     hoverGlow: 'hover:shadow-[0_0_15px_rgba(57,255,20,0.2)]',
@@ -34,7 +34,7 @@ const contactLinks = [
   {
     icon: Phone,
     label: 'Telefone',
-    value: '+55 (18) 99789-6156',
+    value: '+55 (18) 99670-4980',
     href: `tel:${SOCIAL_LINKS.phone}`,
     color: 'text-neon-orange',
     hoverGlow: 'hover:shadow-[0_0_15px_rgba(255,102,0,0.2)]',
@@ -55,7 +55,7 @@ export default function Contact() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <MessageSquare className="w-5 h-5 text-neon-green" />
             <h2 className="font-display text-2xl sm:text-3xl tracking-wider text-gruvbox-fg1">
-              <span className="text-neon-green font-mono text-sm mr-2">09.</span>
+              <span className="text-neon-green font-mono text-sm mr-2">10.</span>
               Contato
             </h2>
           </div>
@@ -68,8 +68,9 @@ export default function Contact() {
             transition={{ delay: 0.2 }}
             className="mt-6 text-gruvbox-fg3 text-sm sm:text-base max-w-lg mx-auto leading-relaxed"
           >
-            Tem um projeto que precisa de um coringa no time? Quer trocar ideia sobre
-            infra, segurança ou automatizar algo impossível? Cola comigo.
+            Atualmente disponível para ofertas, oportunidades DevOps e projetos sob
+            encomenda. Quer trocar ideia sobre infra, segurança, automação ou produto?
+            Cola comigo.
           </motion.p>
 
           <motion.p

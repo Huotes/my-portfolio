@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Athos Aurélio | DevOps & Automation Engineer',
   description:
-    'Portfólio de Athos Aurélio — DevOps em transição estruturada, com foco em automação, Linux, Docker, CI/CD, cloud, segurança de pipelines e observabilidade.',
+    'Portfólio de Athos Aurélio — DevOps em transição estruturada, disponível para ofertas e projetos sob encomenda pela GRUVBOXhouse.',
   keywords: [
     'Athos Aurélio',
     'DevOps',
@@ -19,6 +19,8 @@ export const metadata: Metadata = {
     'DevSecOps',
     'Platform Engineering',
     'Cybersecurity',
+    'Software House',
+    'GRUVBOXhouse',
   ],
   authors: [{ name: 'Athos Aurélio' }],
   icons: {

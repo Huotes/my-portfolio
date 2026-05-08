@@ -65,7 +65,7 @@ export default function Certificates() {
             <Award className="w-5 h-5 text-neon-orange" />
             <h2 className="font-display text-2xl sm:text-3xl tracking-wider text-gruvbox-fg1">
               <span className="text-neon-green font-mono text-sm mr-2">
-                07.
+                08.
               </span>
               Certificados
             </h2>

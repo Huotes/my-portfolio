@@ -126,7 +126,7 @@ export default function Hero() {
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-neon-pink shadow-[0_0_6px_#ff006e]" />
-            <span className="text-gruvbox-fg4">Programando desde os 15</span>
+            <span className="text-gruvbox-fg4">Disponível para ofertas</span>
           </div>
         </motion.div>
 

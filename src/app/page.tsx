@@ -7,6 +7,7 @@ import Profile from '@/components/sections/Profile';
 import Experience from '@/components/sections/Experience';
 import Skills from '@/components/sections/Skills';
 import Projects from '@/components/sections/Projects';
+import GruvboxHouse from '@/components/sections/GruvboxHouse';
 import Certificates from '@/components/sections/Certificates';
 import HackerLab from '@/components/sections/HackerLab';
 import Contact from '@/components/sections/Contact';
@@ -26,6 +27,7 @@ export default function Home() {
         <Experience />
         <Skills />
         <Projects />
+        <GruvboxHouse />
         <Certificates />
         <HackerLab />
         <Contact />
